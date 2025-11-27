@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import config from "../config";
+import config from "../config.js";
 import "./Styles/ViewManagers.css";
 
 export default function ViewManagers() {
