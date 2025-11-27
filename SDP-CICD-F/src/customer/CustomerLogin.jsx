@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import config from '../config';
+import config from '../config.js';
 import { useAuth } from '../contextapi/AuthContext';
 import "./custstyles/CustomerLogin.css";
 
