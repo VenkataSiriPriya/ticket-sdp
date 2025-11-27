@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import config from '../customer/config.js';
+import config from '../config.js';
 export default function AddManager() 
 {
   const [formData, setFormData] = useState({

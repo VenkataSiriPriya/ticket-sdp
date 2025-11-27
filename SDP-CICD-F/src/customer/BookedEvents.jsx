@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from './config';
+import config from '../config';
 
 export default function BookedEvents() {
   const [bookedEvents, setBookedEvents] = useState([]);
