@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import config from '../config';
+import config from './config';
 
 export default function BookEvent() 
 {

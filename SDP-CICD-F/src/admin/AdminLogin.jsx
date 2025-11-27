@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './admin.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import config from '../config.js';
+import config from '../customer/config.js';
 import { useAuth } from '../contextapi/AuthContext'; 
 import "./Styles/AdminLogin.css"; // Assuming you have a CSS file for styling
 
