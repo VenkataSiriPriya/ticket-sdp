@@ -1,0 +1,544 @@
+/* ====== Global Reset ====== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffe60069; /* Muted Blue */
+    --background-color: #ffffff; /* Soft White */
+    --text-color: #2E3440; /* Deep Gray */
+    --accent-color: #000000; /* Warm Coral */
+    --hover-color: #BF616A; /* Rich Red */
+    --border-radius: 10px;
+    --transition: all 0.3s ease-in-out;
+    --section-bg: #E5E9F0; /* Soft Grayish Blue */
+    --input-bg: #FFFFFF; /* Pure White */
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero {
+    background: var(--section-bg);
+}
+
+.hero-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+     margin-right: 10px;
+}
+
+.hero-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.booking {
+    background-color: var(--section-bg);
+    color: var(--text-color);
+}
+
+.booking-options a {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.popular-list .item {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+#how-it-works {
+    background-color: var(--section-bg);
+}
+
+.step {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+blockquote {
+    color: var(--accent-color);
+}
+
+cite {
+    color: var(--primary-color);
+}
+
+#contact {
+    background-color: var(--section-bg);
+    color: var(--text-color);
+}
+
+#contact input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* ====== Dark Mode Styles ====== */
+/* Enhanced Dark Mode Theme with Transparency and Smooth Transitions */
+.dark-mode {
+    --background-color: #121212; /* Deep Black */
+    --text-color: #E0E0E0; /* Soft White */
+    --primary-color: #0F9D58; /* Vibrant Green */
+    --accent-color: #F4B400; /* Warm Yellow */
+    --hover-color: #DB4437; /* Strong Red */
+    --section-bg: rgba(30, 30, 30, 0.9); /* Dark Gray with Transparency */
+    --input-bg: rgba(255, 255, 255, 0.1); /* Soft Transparent White */
+    --overlay: rgba(0, 0, 0, 0.6);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --transition-speed: 0.4s;
+}
+
+.dark-mode body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.dark-mode .hero {
+    background: linear-gradient(var(--overlay), var(--overlay)), 
+                url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1964&auto=format&fit=crop')
+                no-repeat center center/cover;
+    color: var(--text-color);
+    position: relative;
+    padding: 120px 80px;
+    transition: background var(--transition-speed);
+}
+
+.dark-mode .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
+    z-index: 1;
+}
+
+.dark-mode .hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.dark-mode .hero-btn {
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: background-color var(--transition-speed), transform 0.2s;
+}
+
+.dark-mode .hero-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.dark-mode .booking {
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.dark-mode .booking-options a {
+    background: var(--primary-color);
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color var(--transition-speed);
+}
+
+.dark-mode .booking-options a:hover {
+    background-color: var(--hover-color);
+}
+
+.dark-mode .popular-list .item {
+    background-color: rgba(46, 58, 70, 0.85);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.dark-mode .popular-list .item:hover {
+    transform: scale(1.02);
+}
+
+.dark-mode blockquote {
+    color: var(--accent-color);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.dark-mode cite {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.dark-mode #contact {
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+.dark-mode #contact input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 6px;
+    transition: border-color var(--transition-speed);
+}
+
+.dark-mode #contact input:focus {
+    border-color: var(--hover-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-btn {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color var(--transition-speed), box-shadow 0.3s;
+    box-shadow: 0 3px 6px var(--shadow-color);
+}
+
+.dark-mode-btn:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* ====== Hero Section ====== */
+.hero {
+    text-align: center;
+    padding: 100px 80px;
+    image-resolution: 1320px;
+    /* background: url('https://images.unsplash.com/photo-1613544013390-a73dee8d786e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; */
+    color: var(--text-color);
+    background: url('https://img.freepik.com/free-vector/gradient-abstract-wireframe-background_23-2149009903.jpg') no-repeat center center/cover;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+ 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 15px 0 25px;
+    text-align: top;
+    
+    
+}
+
+.hero-btn {
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.hero-btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* ====== Booking Section ====== */
+.booking {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.booking h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.booking-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.booking-options a {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #000;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.booking-options a:hover {
+    background: var(--hover-color);
+}
+
+/* ====== Popular Movies & Events ====== */
+#popular {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.popular-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.popular-list .item {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 0px;
+    transition: var(--transition);
+}
+
+
+
+
+.popular-list img {
+    width: 200px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.popular-list p {
+    font-weight: bold;
+}
+
+/* ====== How It Works ====== */
+#how-it-works {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--accent-color);
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.step {
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.step:hover {
+    background-color: var(--hover-color);
+}
+
+/* ====== Testimonials ====== */
+#testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#Description {
+    max-width: 700px;
+    margin: 20px auto; /* Centers the section */
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd; /* Adds a border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+    text-align: center;
+}
+
+#Description p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--hover-color);
+    margin: 20px 0;
+}
+
+cite {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ====== Contact Section ====== */
+/* Contact Section Styles */
+#contact {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.contact-container input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.hero-btn {
+  background-color: #4f46e5;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Description Section Styles */
+#description {
+  background-color: #f1f5f9; /* soft light gray-blue for contrast */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#description p {
+  font-size: 18px;
+  color: #334155; /* slate-700 shade */
+  margin-bottom: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+
+/* ====== Responsive Design ====== */
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .booking-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .booking-options a {
+        padding: 12px 20px;
+    }
+
+    .step {
+        padding: 12px;
+    }
+
+    .popular-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular-list .item {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-btn {
+        padding: 10px 15px;
+    }
+
+    .booking-options a {
+        padding: 10px 15px;
+    }
+
+    .step {
+        font-size: 0.9rem;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+    }
+}

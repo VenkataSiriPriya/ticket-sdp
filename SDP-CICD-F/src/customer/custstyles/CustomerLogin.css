@@ -1,0 +1,112 @@
+/* Main Container */
+/* .customer-login-container {
+  padding: 40px;
+  margin: 50px auto;
+  max-width: 400px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+} */
+
+/* Title */
+.customer-login-title {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Form */
+.customer-login-form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+    margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Form Field */
+.customer-form-field {
+  display: flex;
+  justify-content: right; /* Horizontally centers the child elements */
+  align-items: center; /* Vertically centers the child elements */
+  width: 100%;
+}
+
+.customer-form-field label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: center; /* optional */
+}
+
+.customer-form-field input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  align-content: center;
+  border-radius: 10px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.customer-form-field input:focus {
+  border-color: #9000ff85;
+  outline: none;
+}
+
+/* Submit Button */
+.customer-submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.customer-submit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Response Message */
+.customer-response-message {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.customer-response-message.success {
+  color: green;
+}
+
+.customer-response-message.error {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .customer-login-container {
+    padding: 25px;
+  }
+
+  .customer-login-title {
+    font-size: 24px;
+  }
+
+  .customer-submit-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
